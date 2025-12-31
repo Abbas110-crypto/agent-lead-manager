@@ -6,13 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 function alm_create_database_tables() {
     global $wpdb;
 
-    // Use the correct character set for the site (supports emojis/international text)
     $charset_collate = $wpdb->get_charset_collate();
 
-    // Load the upgrade library required for dbDelta
     require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
-    // --- TABLE 1: LEADS (The Customer List) ---
     $table_leads = $wpdb->prefix . 'crm_leads';
     
     $sql_leads = "CREATE TABLE $table_leads (
@@ -28,12 +25,9 @@ function alm_create_database_tables() {
         KEY status (status)
     ) $charset_collate;";
 
-    // Create/Update the leads table
     dbDelta( $sql_leads );
 
 
-    // --- TABLE 2: ORDERS (The Affiliate Links) ---
-    // This stores the history of every link generated
     $table_orders = $wpdb->prefix . 'crm_orders';
 
     $sql_orders = "CREATE TABLE $table_orders (
@@ -50,10 +44,8 @@ function alm_create_database_tables() {
         KEY agent_id (agent_id)
     ) $charset_collate;";
 
-    // Create/Update the orders table
     dbDelta( $sql_orders );
 
-    // Store the database version (useful for future updates)
     add_option( 'alm_db_version', '1.0' );
 }
 ?>
