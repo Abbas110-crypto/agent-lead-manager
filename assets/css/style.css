@@ -1,0 +1,169 @@
+/* -----------------------------------------------------------
+   AGENT LEAD MANAGER - MASTER STYLESHEET
+----------------------------------------------------------- */
+
+/* --- 1. VARIABLES (Change colors here easily) --- */
+:root {
+    --alm-primary: #0073aa;      /* Main Blue */
+    --alm-primary-hover: #005177;
+    --alm-success: #2ecc71;      /* Green */
+    --alm-warning: #f1c40f;      /* Yellow */
+    --alm-danger: #e74c3c;       /* Red */
+    --alm-text: #333333;
+    --alm-bg-light: #f4f6f9;
+    --alm-border: #e1e4e8;
+}
+
+/* --- 2. WRAPPERS --- */
+.alm-agent-wrapper, 
+.alm-dashboard-wrapper, 
+.alm-login-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: var(--alm-text);
+    box-sizing: border-box;
+}
+
+/* --- 3. TABLES (Modern & Clean) --- */
+.alm-table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+table.alm-leads-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+table.alm-leads-table th {
+    background: #f8f9fa;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 16px;
+    border-bottom: 2px solid var(--alm-border);
+    text-align: left;
+}
+
+table.alm-leads-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--alm-border);
+    vertical-align: middle;
+}
+
+table.alm-leads-table tr:last-child td {
+    border-bottom: none;
+}
+
+table.alm-leads-table tr:hover {
+    background-color: #fafbfc;
+}
+
+/* --- 4. BUTTONS --- */
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-call {
+    background-color: white;
+    border: 1px solid var(--alm-border);
+    color: var(--alm-text);
+}
+.btn-call:hover {
+    background-color: #f1f1f1;
+    border-color: #ccc;
+}
+
+.btn-order {
+    background-color: var(--alm-primary);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,115,170,0.2);
+}
+.btn-order:hover {
+    background-color: var(--alm-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0,115,170,0.3);
+}
+
+/* --- 5. BADGES (Status Indicators) --- */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.badge.new { background: #e3f2fd; color: #1976d2; }
+.badge.called { background: #fff3cd; color: #856404; }
+.badge.converted { background: #d4edda; color: #155724; }
+
+/* --- 6. MODAL (Popup) --- */
+.alm-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+}
+
+.alm-modal-content {
+    background-color: white;
+    margin: 10vh auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    position: relative;
+    animation: almSlideIn 0.3s ease-out;
+}
+
+@keyframes almSlideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.alm-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.alm-close:hover { color: var(--alm-danger); }
+
+/* --- 7. INPUTS --- */
+.alm-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: 2px solid var(--alm-border);
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+.alm-input:focus {
+    border-color: var(--alm-primary);
+    outline: none;
+}
