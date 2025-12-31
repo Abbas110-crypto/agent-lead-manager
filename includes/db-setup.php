@@ -1,15 +1,8 @@
 <?php
-// includes/db-setup.php
 
-// Prevent direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
-
-/**
- * Main function to create or update database tables.
- * This runs when the plugin is activated.
- */
 function alm_create_database_tables() {
     global $wpdb;
 
