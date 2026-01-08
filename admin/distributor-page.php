@@ -17,7 +17,6 @@ function alm_register_distributor_menu() {
     );
 }
 
-// 2. The Main Page Renderer
 function alm_render_distributor_page() {
     global $wpdb;
 
@@ -63,7 +62,6 @@ function alm_render_distributor_page() {
         }
         .alm-header h1 { margin: 0; color: #23282d; font-size: 24px; }
         
-        /* Stats Cards */
         .alm-stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -80,7 +78,6 @@ function alm_render_distributor_page() {
         .alm-card h3 { margin: 0 0 10px 0; color: #555; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
         .alm-card .number { font-size: 32px; font-weight: bold; color: #23282d; }
         
-        /* Upload Section */
         .alm-upload-section {
             background: #fff;
             padding: 40px;
@@ -91,7 +88,6 @@ function alm_render_distributor_page() {
         }
         .alm-upload-section h2 { margin-top: 0; }
         
-        /* Message Box */
         .alm-msg { padding: 15px; border-radius: 5px; margin-bottom: 20px; }
         .alm-msg.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         .alm-msg.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
