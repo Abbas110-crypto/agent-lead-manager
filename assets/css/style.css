@@ -9,7 +9,6 @@
     --alm-border: #e1e4e8;
 }
 
-/* --- 2. WRAPPERS --- */
 .alm-agent-wrapper, 
 .alm-dashboard-wrapper, 
 .alm-login-wrapper {
@@ -18,7 +17,6 @@
     box-sizing: border-box;
 }
 
-/* --- 3. TABLES (Modern & Clean) --- */
 .alm-table-container {
     overflow-x: auto;
     background: white;
@@ -58,7 +56,6 @@ table.alm-leads-table tr:hover {
     background-color: #fafbfc;
 }
 
-/* --- 4. BUTTONS --- */
 .btn-action {
     display: inline-flex;
     align-items: center;
@@ -94,7 +91,6 @@ table.alm-leads-table tr:hover {
     box-shadow: 0 4px 6px rgba(0,115,170,0.3);
 }
 
-/* --- 5. BADGES (Status Indicators) --- */
 .badge {
     padding: 4px 10px;
     border-radius: 20px;
@@ -106,7 +102,6 @@ table.alm-leads-table tr:hover {
 .badge.called { background: #fff3cd; color: #856404; }
 .badge.converted { background: #d4edda; color: #155724; }
 
-/* --- 6. MODAL (Popup) --- */
 .alm-modal {
     display: none;
     position: fixed;
