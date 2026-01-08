@@ -1,8 +1,3 @@
-/* -----------------------------------------------------------
-   AGENT LEAD MANAGER - MASTER STYLESHEET
------------------------------------------------------------ */
-
-/* --- 1. VARIABLES (Change colors here easily) --- */
 :root {
     --alm-primary: #0073aa;      /* Main Blue */
     --alm-primary-hover: #005177;
